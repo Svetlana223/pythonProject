@@ -1,0 +1,4 @@
+ERROR, asctime.now(), time:2023-12-14 22:11:11,089, NegativeValueError
+ERROR, asctime.now(), time:2023-12-14 22:12:38,544, NegativeValueError
+ERROR, asctime.now(), time:2023-12-14 22:12:54,453, NegativeValueError
+ERROR, asctime.now(), time:2023-12-14 22:13:06,872, NegativeValueError
