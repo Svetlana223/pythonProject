@@ -1,5 +1,5 @@
 import logging
-
+import argparse
 
 class NegativeValueError(ValueError):
     pass
@@ -75,10 +75,8 @@ class Rectangle:
         height = perimeter / 2 - width
         return Rectangle(width, height)
 
-rectangle = Rectangle(2,-15)
+# rectangle = Rectangle(2,-15)
 
-
-import argparse
 
 def main():
     parser = argparse.ArgumentParser()
@@ -86,7 +84,10 @@ def main():
     parser.add_argument('--height', type=float)
 
     args = parser.parse_args()
-    rectangle = Rectangle(args.width, args.height)
-    print(f"Rectangle created with width: {rectangle.width}, height: {rectangle.height}")
+    try:
+        rectangle = Rectangle(args.width, args.height)
+        print(f"Rectangle created with width: {rectangle.width}, height: {rectangle.height}")
+    except NegativeValueError as e:
+        print(e)
 
 
